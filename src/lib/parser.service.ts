@@ -22,7 +22,7 @@ export class ParserService {
           videoId: data.videoRenderer.videoId
         },
         url: `https://www.youtube.com/watch?v=${data.videoRenderer.videoId}`,
-        author: data.videoRenderer.ownerText.runs[0],
+        author: data.videoRenderer.ownerText.runs[0].text,
         title,
         description,
         duration_raw: data.videoRenderer.lengthText ? data.videoRenderer.lengthText.simpleText : null,
